@@ -6,7 +6,7 @@
 ## javascript
 - `var` vs `let` vs `const`
 - Scope
-  - Scope Chain
+  - [에어맨의 스코프 정리](https://develoger.kr/frontend/scope/)
 - 실행 컨택스트
   - [[10분 테코톡] 💙 하루의 실행 컨텍스트](https://www.youtube.com/watch?v=EWfujNzSUmw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=2)
   - [[JavaScript] Execution Context(실행 컨텍스트) 정의와 종류](https://www.youtube.com/watch?v=AbNc8_poxu4)
