@@ -28,6 +28,7 @@
 - 모듈
 - Generator
   - [[10분 테코톡] 🌙 파노의 Generator & Iterator](https://www.youtube.com/watch?v=3uuBHt_SNTA&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=25)
+- call vs apply vs bind
 
 ## 브라우저
 - 렌더링 과정
