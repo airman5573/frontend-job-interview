@@ -19,6 +19,7 @@
 - this
   - [[10분 테코톡] 🥦 브콜의 This](https://www.youtube.com/watch?v=7RiMu2DQrb4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=85)
 - Callback Hell 탈출
+  - [에어맨의 Callback Hell 탈출기](https://develoger.kr/frontend/callback-hell-%ed%83%88%ec%b6%9c%ea%b8%b0/)
 - Promise
   - [[10분 테코톡] 📖 카일의 프론트엔드의 비동기](https://www.youtube.com/watch?v=fsmekO1fQcw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=52)
 - Async/Await
