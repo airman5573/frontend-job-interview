@@ -134,6 +134,7 @@
 - Suspense
   - [초간단 비동기 렌더링 React Suspense](https://www.youtube.com/watch?v=8q7OQSPLF4k)
 - Reconsile
+  - [React 공식문서](https://reactjs.org/docs/reconciliation.html)
   - [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=ZCuYPiUIONs)
   - [Understanding React's UI Rendering Process](https://www.youtube.com/watch?v=i793Qm6kv3U)
   - [SMOOSHCAST: React Fiber Deep Dive with Dan Abramov](https://www.youtube.com/watch?v=aS41Y_eyNrU)
