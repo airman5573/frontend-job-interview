@@ -13,6 +13,7 @@
   - [Execution Context(실행 컨텍스트) 생성과정 (hoisting 설명 포함)](https://www.youtube.com/watch?v=SpHiBkjuwQM)
 - 클로저
   - [[10분 테코톡] 🍧 엘라의 Scope & Closure](https://www.youtube.com/watch?v=PVYjfrgZhtU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=76)
+  - 실제 사용 사례
 - Prototype
   - [[10분 테코톡] 💼 크리스의 Prototype](https://www.youtube.com/watch?v=RYxgNZW3wl0&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=83)
 - function vs arrow function
@@ -24,12 +25,18 @@
   - [[10분 테코톡] 📖 카일의 프론트엔드의 비동기](https://www.youtube.com/watch?v=fsmekO1fQcw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=52)
 - Async/Await
 - Class
+  - Class는 어떻게 작동하는가
 - 에러 처리
   - [[10분 테코톡] 🌼 티케의 프론트엔드에서의 에러 핸들링](https://www.youtube.com/watch?v=FXtooPhupr4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=32)
 - 모듈
 - Generator
   - [[10분 테코톡] 🌙 파노의 Generator & Iterator](https://www.youtube.com/watch?v=3uuBHt_SNTA&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=25)
 - call vs apply vs bind
+- 접근자 프로퍼티
+- new
+  - `new 생성자함수()` 이후 발생하는 일은?
+- attribute와 property의 차이점은?
+- mutable vs immutable
 
 ## 브라우저
 - 렌더링 과정
@@ -42,17 +49,24 @@
   - [Event loop와 call stack 은 어떻게 작동하나?](https://www.youtube.com/watch?v=zi-IG6VHBh8)
   - [[JavaScript] callback을 활용하여 비동기 호출 순서를 제어하기](https://www.youtube.com/watch?v=R9zkJhFyLPA)
   - [[10분 테코톡] 🍗 피터의 이벤트루프](https://www.youtube.com/watch?v=wcxWlyps4Vg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=79)
+  - 이벤트 루프와 실행 컨택스트
 - script의 defer/async
   - [script 태그는 어떻게 외부자원을 가져오나(async, defer)](https://www.youtube.com/watch?v=c_IGI0JjtUA)
 - Page Load Events
   - [DOMContentLoaded(Load 와 차이)](https://www.youtube.com/watch?v=yIjrdQDRCuk)
   - [readyState 와 페이지 로드 이벤트](https://www.youtube.com/watch?v=CbLR_5d1dDA)
-- 이벤트 버블링
-  - [이벤트 버블링 (기초부터 코드로 설명)](https://www.youtube.com/watch?v=DrhFKIbijvk)
-- 이벤트 캡처링
-  - [이벤트 캡쳐링](https://www.youtube.com/watch?v=JyOaAlF2epY)
+- Event Listener
+  - 이벤트 버블링
+    - [이벤트 버블링 (기초부터 코드로 설명)](https://www.youtube.com/watch?v=DrhFKIbijvk)
+  - 이벤트 캡처링
+    - [이벤트 캡쳐링](https://www.youtube.com/watch?v=JyOaAlF2epY)
+    - [Event order](https://www.quirksmode.org/js/events_order.html#link4)
+  - `element.onclick(doSomthing)` vs `element.addEventListener(doSomething)`
 - Storage
   - [[10분 테코톡] 🦄 디토의 웹스토리지 & 쿠키](https://www.youtube.com/watch?v=-4ZsGy1LOiE&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=33)
+  - `cookie` vs `sessionStorage` vs `localStorage`
+- 디바운스와 쓰로틀
+  - [디바운스(Debounce)와 스로틀(Throttle)](https://webclub.tistory.com/607)
 
 ## 통신
 - HTTP요청과 응답 과정
@@ -119,6 +133,19 @@
   - [[10분 테코톡] 🥁 지그의 Virtual DOM](https://www.youtube.com/watch?v=PN_WmsgbQCo&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=61)
 - Suspense
   - [초간단 비동기 렌더링 React Suspense](https://www.youtube.com/watch?v=8q7OQSPLF4k)
+- Reconsile
+  - [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=ZCuYPiUIONs)
+  - [Understanding React's UI Rendering Process](https://www.youtube.com/watch?v=i793Qm6kv3U)
+  - [SMOOSHCAST: React Fiber Deep Dive with Dan Abramov](https://www.youtube.com/watch?v=aS41Y_eyNrU)
+- 생명주기
+- useMemo vs useCallback vs React.memo
+- Custom Hook
+- 리액트에서 클로저가 사용되는 경우
+- onClick에 들어가는 handler함수가 변경될때 re-rendering되는가?
+- React vs Vue vs Angular
+- SPA의 단점
+- Class Component vs Functional Component
+- High-Order-Function
 
 ## Design Pattern
 - MVC Pattern
@@ -140,10 +167,12 @@
   - [[10분 테코톡] 🔧알트의 XSS](https://www.youtube.com/watch?v=bSGqBoZd8WM&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=102)
 - HTTPS
   - [[10분 테코톡] 🍭 다니의 HTTPS](https://www.youtube.com/watch?v=wPdH7lJ8jf0&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=20)
-- CORS
+- SOP(Same Origin Policy)
+- CORS(Cross-Origin Resource Sharing)
   - [[10분 테코톡] ⚽코나스의 CORS](https://www.youtube.com/watch?v=_sLjXviYivM&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=149)
   - [[10분 테코톡] 🤠럿고의 CORS](https://www.youtube.com/watch?v=7iGIfcEsc2g&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=101)
   - [[10분 테코톡] 🌳 나봄의 CORS](https://www.youtube.com/watch?v=-2TgkKYmJt4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=55)
+  - [CORS에 영향 받지 않고 Request할 수 있는 경우](https://homoefficio.github.io/2015/07/21/Cross-Origin-Resource-Sharing/)
 
 ## 기타 등등
 - 프레임워크 vs 라이브러리 vs API
@@ -153,6 +182,7 @@
 - 인증
   - [[10분 테코톡] 🎡토니의 인증과 인가](https://www.youtube.com/watch?v=y0xMXlOAfss&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=118)
   - [[10분 테코톡] 🌳 나봄의 인증과 인가](https://www.youtube.com/watch?v=TXWUNePimAc&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=47)
+  - JWT(JSON WEB TOKEN)
 - Blocking vs Non-Blocking
   - [[10분 테코톡] 🐰 멍토의 Blocking vs Non-Blocking, Sync vs Async](https://www.youtube.com/watch?v=oEIoqGd-Sns&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=56)
 - Test
@@ -160,3 +190,9 @@
   - [[10분 테코톡] 🍺 서니의 프론트엔드 성능 측정](https://www.youtube.com/watch?v=A6J74xLWqYg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=37) 
 - 배포
   - [[10분 테코톡] 🍟 웨지의 지속적 배포](https://www.youtube.com/watch?v=X6QGhg19Kqg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=29)
+- HTML
+  - `<img srcset="..."` `srcset` 속성의 역할은?
+  - `<a>`태그 안에 `<button>`을 써도 되는가?
+    - [Can I nest a <button> element inside an <a> using HTML5?](https://stackoverflow.com/a/6393863/9279003)
+    - [codepen 테스트](https://codepen.io/YOONBYEONGIN/pen/eYGyYXV)
+  - 왜 CSS `<link>`를 `<head>`에 놓는것이 좋은가?
