@@ -2,198 +2,229 @@
 개발 면접때 자주나오는 질문들과 그에대한 상세한 설명을 기록합니다.
 대충 알고있던 개념들을 더욱 명확하게 합니다. 면접대비를 위함이지만, 본질적으로는 개념을 확실하게 익히자는 의도를 갖고있습니다.
 
-# 분류
-## javascript
-- `var` vs `let` vs `const`
-- Scope
-  - [에어맨의 스코프 정리](https://develoger.kr/frontend/scope/)
-- 실행 컨택스트
-  - [[10분 테코톡] 💙 하루의 실행 컨텍스트](https://www.youtube.com/watch?v=EWfujNzSUmw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=2)
-  - [[JavaScript] Execution Context(실행 컨텍스트) 정의와 종류](https://www.youtube.com/watch?v=AbNc8_poxu4)
-  - [Execution Context(실행 컨텍스트) 생성과정 (hoisting 설명 포함)](https://www.youtube.com/watch?v=SpHiBkjuwQM)
-- 클로저
-  - [[10분 테코톡] 🍧 엘라의 Scope & Closure](https://www.youtube.com/watch?v=PVYjfrgZhtU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=76)
-  - 실제 사용 사례
-- Prototype
-  - [[10분 테코톡] 💼 크리스의 Prototype](https://www.youtube.com/watch?v=RYxgNZW3wl0&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=83)
-- function vs arrow function
-- this
-  - [[10분 테코톡] 🥦 브콜의 This](https://www.youtube.com/watch?v=7RiMu2DQrb4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=85)
-- Callback Hell 탈출
-  - [에어맨의 Callback Hell 탈출기](https://develoger.kr/frontend/callback-hell-%ed%83%88%ec%b6%9c%ea%b8%b0/)
-- Promise
-  - [[10분 테코톡] 📖 카일의 프론트엔드의 비동기](https://www.youtube.com/watch?v=fsmekO1fQcw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=52)
-- Async/Await
-- Class
-  - Class는 어떻게 작동하는가
-- 에러 처리
-  - [[10분 테코톡] 🌼 티케의 프론트엔드에서의 에러 핸들링](https://www.youtube.com/watch?v=FXtooPhupr4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=32)
-- 모듈
-- Generator
-  - [[10분 테코톡] 🌙 파노의 Generator & Iterator](https://www.youtube.com/watch?v=3uuBHt_SNTA&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=25)
-- call vs apply vs bind
-- 접근자 프로퍼티
-- new
-  - `new 생성자함수()` 이후 발생하는 일은?
-- attribute와 property의 차이점은?
-- mutable vs immutable
+# 태그 리스트
+- `browser`, `dom`, `event-loop`, `storage`,
+- `js`, `callback`, `promise`, `async`, `prototype`, `execution-context`, `error-handling`, `this`, `scope`, `class`, `event`
+- `html`, `defer`, `async`, `ts`
+- `react`, `jsx`, `hook`, `context`, `ref`, `redux`, `react-query`
+- `network`, `secure`
+- `performance`, `optimization`, `ssr`
+- `pattern`, `paradigm`
+- `module`, `bundle`, `webpack`, `babel`
+- `css`, `scss`, `emotion`, `styled-component`
+- `cs`
+- `data-structure`, `algorithm`
+- `上`, `中`, `下` (중요도)
+- `why`, `history`
 
-## 브라우저
-- 렌더링 과정
-  - [Browser rendering process 1편 - Browser 구성 요소](https://www.youtube.com/watch?v=oLC_QYPmtS0)
-  - [Browser rendering process 2편 - 렌더링 엔진 동작과정](https://www.youtube.com/watch?v=EBe-OHkf9w8)
-  - [Browser rendering process 3편 - Browser rendering optimization](https://www.youtube.com/watch?v=G4eQziVzCTE)
-  - [[10분 테코톡] 🕶 곤이의 DOM&BOM](https://www.youtube.com/watch?v=q1fQnGG1bgU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=88)
-  - [[10분 테코톡] ☕️ 체프의 브라우저 렌더링](https://www.youtube.com/watch?v=sJ14cWjrNis&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=58)
-- Event Loop
-  - [Event loop와 call stack 은 어떻게 작동하나?](https://www.youtube.com/watch?v=zi-IG6VHBh8)
-  - [[JavaScript] callback을 활용하여 비동기 호출 순서를 제어하기](https://www.youtube.com/watch?v=R9zkJhFyLPA)
-  - [[10분 테코톡] 🍗 피터의 이벤트루프](https://www.youtube.com/watch?v=wcxWlyps4Vg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=79)
-  - 이벤트 루프와 실행 컨택스트
-- script의 defer/async
-  - [script 태그는 어떻게 외부자원을 가져오나(async, defer)](https://www.youtube.com/watch?v=c_IGI0JjtUA)
-- Page Load Events
-  - [DOMContentLoaded(Load 와 차이)](https://www.youtube.com/watch?v=yIjrdQDRCuk)
-  - [readyState 와 페이지 로드 이벤트](https://www.youtube.com/watch?v=CbLR_5d1dDA)
-- Event Listener
-  - 이벤트 버블링
-    - [이벤트 버블링 (기초부터 코드로 설명)](https://www.youtube.com/watch?v=DrhFKIbijvk)
-  - 이벤트 캡처링
-    - [이벤트 캡쳐링](https://www.youtube.com/watch?v=JyOaAlF2epY)
-    - [Event order](https://www.quirksmode.org/js/events_order.html#link4)
-  - `element.onclick(doSomthing)` vs `element.addEventListener(doSomething)`
-- Storage
-  - [[10분 테코톡] 🦄 디토의 웹스토리지 & 쿠키](https://www.youtube.com/watch?v=-4ZsGy1LOiE&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=33)
-  - `cookie` vs `sessionStorage` vs `localStorage`
-- 디바운스와 쓰로틀
-  - [디바운스(Debounce)와 스로틀(Throttle)](https://webclub.tistory.com/607)
+# 질문 리스트
 
-## 통신
-- HTTP요청과 응답 과정
-  - [[10분 테코톡] 🐬히로의 웹 요청과 응답](https://www.youtube.com/watch?v=xz7e-GL2g6g&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=133)
-- Connection Pool & Keep-Alive
-  - [[10분 테코톡] 🍪쿠기의 Connection Pool & Keep-Alive](https://www.youtube.com/watch?v=MBgEhSUOlXo&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=158)
-- 요청 응답 흐름 과정
-  - [[10분 테코톡] 👨‍🏫철시의 요청 응답 흐름 과정](https://www.youtube.com/watch?v=4SaW9BbtL3k&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=161)
-  - [[10분 테코톡] 🎧 삭정의 Web 요청 & 응답과정](https://www.youtube.com/watch?v=0jV7xOUcKog&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=82)
-  - [브라우저에 URL을 입력하면 어떤 과정이 진행될까?](https://www.youtube.com/watch?v=ipwfEUslfQA)
-- HTTP 2.0
-  - [[10분 테코톡] 🙆‍♂️아이크의 HTTP 2.0](https://www.youtube.com/watch?v=uhlvXrDpM-Y&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=154)
-  - [[10분 테코톡] 🧃쿨라임의 HTTP/1.1, HTTP/2, 그리고 QUIC](https://www.youtube.com/watch?v=xcrjamphIp4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=119)
-  - [[10분 테코톡] 🎃손너잘의 HTTP1.1, HTTP2, 그리고 QUIC](https://www.youtube.com/watch?v=ZgSC5K1sUYM&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=49)
-- Web Polling vs Web Push
-  - [[10분 테코톡] 😎유니의 Web polling vs Web push](https://www.youtube.com/watch?v=v11dxmc5a0I&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=151)
-- Socket
-  - [[10분 테코톡] 🧲코일의 Web Socket](https://www.youtube.com/watch?v=MPQHvwPxDUw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=94)
+## JS/TS
 
-## 서버
-- 웹서버 vs WAS
-  - [[10분 테코톡] 👩‍🦰희봉의 웹서버 vs WAS](https://www.youtube.com/watch?v=NyhbNtOq0Bc&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=168)
-  - [[10분 테코톡] 🎙티거의 Web server vs WAS](https://www.youtube.com/watch?v=F_vBAbjj4Pk&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=124)
-  - [[10분 테코톡] 👳‍♂️ 알리의 Web Server vs WAS](https://www.youtube.com/watch?v=mcnJcjbfjrs&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=60)
-- DNS
-  - [[10분 테코톡] 🧑‍💻🧑‍💻동글&라면의 DNS](https://www.youtube.com/watch?v=5rBzHoR4F2A&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=99)
-- Caching
-  - [[10분 테코톡] 🤔디디의 Redis](https://www.youtube.com/watch?v=Gimv7hroM8A&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=92)
-  - [[10분 테코톡] 🏖 파피의 Caching(캐싱)](https://www.youtube.com/watch?v=JBFT4KyEvoY&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=42)
-  - [[10분 테코톡] 📸소니의 Cache](https://www.youtube.com/watch?v=NxFJ-mJdVNQ&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=115)
-  - [[10분 테코톡] 🐻큰곰의 Cache](https://www.youtube.com/watch?v=c33ojJ7kE7M&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=176)
+### 上
 
-## CS
-- CPU
-  - [CPU는 어떻게 작동할까?](https://www.youtube.com/watch?v=Fg00LN30Ezg)
-- Process vs Thread
-  - [[10분 테코톡] 👩‍💻👨‍💻 쪼밀리와 오구의 Process vs Thread](https://www.youtube.com/watch?v=DmZnOg5Ced8&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=125)
-  - [[10분 테코톡] 🐳김고래 Process & Thread](https://www.youtube.com/watch?v=LLiV5Yz1AWg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=162)
-  - [[10분 테코톡] 🌷 코다의 Process vs Thread](https://www.youtube.com/watch?v=1grtWKqTn50&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=57)
-- OSI 7 Layers
-  - [[10분 테코톡] 🔮 히히의 OSI 7 Layer](https://www.youtube.com/watch?v=1pfTxp25MA8&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=120)
-  - [[10분 테코톡] 👍 파즈의 OSI 7 Layer](https://www.youtube.com/watch?v=Fl_PSiIwtEo&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=51)
-- TCP & UDP
-  - [[10분 테코톡] 👨‍🏫르윈의 TCP UDP](https://www.youtube.com/watch?v=ikDVGYp5dhg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=165)
-  - [[10분 테코톡] 🔮 수리의 TCP/IP](https://www.youtube.com/watch?v=BEK354TRgZ8&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=12)
-- Context Switching
-  - [[10분 테코톡] 🙇‍♂️코맥의 Interrupt와 Context Switching](https://www.youtube.com/watch?v=-4HKhwlH3FQ&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=160)
-- Memory
-  - [[10분 테코톡] ⛄️그니의 리눅스 메모리 관리](https://www.youtube.com/watch?v=OPdjLaW0flU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=123)
-  - [[10분 테코톡] 🤷‍♂️ 현구막의 리눅스 메모리 관리](https://www.youtube.com/watch?v=qxmdX449z1U&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=54)
-  - [[10분 테코톡] 🤔 조엘의 GC](https://www.youtube.com/watch?v=FMUpVA0Vvjw&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=24)
-  - [[10분 테코톡] 🧚🏻 배럴의 가상 메모리](https://www.youtube.com/watch?v=5pEDL6c--_k&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=16)
-  - [[JavaScript] 가비지 컬렉터란? 1편 어떻게 동작하나](https://www.youtube.com/watch?v=rLx7yfdMgHQ)
-  - [[JavaScript] 가비지 컬렉터란? 2편 메모리 누수를 방지하는 팁!](https://www.youtube.com/watch?v=q7AIfvWg1EE)
-- File System
-  - [[10분 테코톡] 🍊오렌지의 리눅스 파일 시스템](https://www.youtube.com/watch?v=oeuVjeeoLSQ&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=121)
-  - [[10분 테코톡] 🕺 루트의 리눅스 파일 시스템](https://www.youtube.com/watch?v=FiK0Hu5Pr3Q&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=53)
+- [`上`, `js`, `prototype`, `why`] prototype의 장점이 무엇이길래 javascript에서 채택했을까요? 그렇다면 prototype은 무엇인가요?
+- [`上`, `js`] 최근 js의 동향에 대해 설명해 주세요
+- [`上`, `js`, `why`] javascript의 문제점으로 무엇이 있고, 왜 그게 문제점일까요?
+- [`上`, `ts`, `why`] 왜 typescript가 각광받고, js에선 ts를 표준으로 합치려 할까요? (벌써 Stage 1;;)
+- [`上`, `js`] javascript 태동기에 목표는 무엇이고, 지금과 어떤게 달라졌나요?
+- [`上`, `js`] ECMAScript에서 해결하려는 문제는 무엇이고, 앞으로의 과제는 무엇일까요?
+- [`上`, `browser`, `event-loop`] 브라우저가 동시성 문제를 어떻게 해결했는지 설명해 주세요
+- [`上`, `js`, `paradigm`] 명령형(Imperative) 프로그래밍 vs 선언형(Declarative) 프로그래밍
+- [`上`, `js`] 최근에 개발중 했던 추상화에 대해 소개해 주세요
+
+### 中
+
+- [`中`, `js`] var vs let vs const
+- [`中`, `js`, `async`] callback vs promise
+- [`中`, `js`, `execution-context`] 실행 컨텍스트에 대해 설명해 주세요
+- [`中`, `js`, `execution-context`] 실행 컨텍스트가 없는 다른 언어가 있을까요?
+- [`中`, `js`] 일반 함수와 화살표 함수의 차이점은 무엇일까요?
+- [`中`, `js`] this에 대해서 설명해 주세요
+- [`中`, `js`, `async`] promise에 비해 async/await가 가지는 장점은 무엇인가요?
+- [`中`, `js`] 순수 함수란 무엇이고 이 함수가 가지는 장점은 무엇인가요?
+- [`中`, `js`] 스코프 체인이란 무엇인가요?
+- [`中`, `browser`, `event-loop`] 애니메니션을 구현할때 requestAnimationFrame이 setTimeout보다 어떤점에서 더 좋은건가요?
+- [`中`, `js`, `network`] cookies vs localStorage vs session storage
+- [`中`, `js`, `network`] accessToken을 어떻게 관리하는것이 안전할까요?
+- [`中`, `js`, `browser`, `event-loop`] 무한 스크롤을 구현할때 intersection observer가 scroll event listener보다 더 좋은 이유를 설명해 주세요
+- [`中` `js`, `module`] commonjs vs es6 module
+- [`中`, `js`] 클로저에 대해 설명해 주세요
+- [`中`, `js`] 렉시컬 환경(Lexical Environment)에 대해 설명해 주세요
+- [`中`, `js`] javascript가 유동적인 언어인 이유는 무엇인가요?
+- [`中`, `js`] 깊은 복사와 얕은 복사에 대해 설명해 주세요
+- [`中`, `js`, `css`] css 으로 animation을 구현하는것과 js로 animation을 구현하는것의 차이점에 대해 설명해 주세요
+- [`中`, `js`, `pattern`] javascript가 객체 지향 언어라고 하는데 그 이유가 무엇일지 이야기 해주세요
+- [`中`, `js`] primitive data인데 어떻게 내장 함수를 사용할 수 있는걸까요? (`"Hello".toLowerCase()`);
+- [`中`, `ts`] type vs interface
+- [`中`, `js`, `pattern`] MVC pattern에 대해 설명해 주세요
+- [`中`, `js`, `pattern`] Flux pattern에 대해 설명해 주세요
+
+### 下
+
+- [`下`, `js`, `scope`] 함수레벨 스코프 vs 블록레벨 스코프
+- [`下`, `js`] generator에 대해 설명해 주세요
+- [`下`, `js`] iterable에 대해 설명해 주세요
+- [`下`, `js`] call vs apply vs bind
+- [`下`, `js`] 생성자 함수와 일반 함수의 차이점은 무엇인가요?
+- [`下`, `js`] mutable vs immutable
+- [`下`, `js`, `pattern`] event delegation에 대해 설명해 주세요
+- [`下`, `js`] undefined vs null
+- [`下`, `js`, `why`] symbol은 왜 나왔고 언제 사용하면 좋을지 설명해 주세요
+- [`下`, `js`] falsy한 타입과 truthy한 타입에 대해 설명해 주세요
+- [`下`, `js`] hasOwnProperty의 위험성에 대해 설명해 주세요
+- [`下`, `js`] primitive type vs object
+- [`下`, `js`] 일급 함수란 무엇인가요?
+- [`下`, `js`] 객체 변경을 방지하는 방법에는 어떤것들이 있을까요?
+- [`下`, `js`] 객체 리터럴로 만든 객체와 생성자 함수로 만든 객체는 어떤 차이점이 있나요?
+- [`下`, `js`] strict mode로 했을때 어떤 장점이 있나요?
+- [`下`, `js`] 객체 vs Set vs Map
+- [`下`, `js`, `DOM`] HTMLCollection vs NodeList
+- [`下`, `js`, `DOM`] innerHTML vs insertAdjacentHTML
+- [`下`, `js`, `DOM`] HTML 어트리뷰트 vs. DOM 프로퍼티
+- [`下`, `js`, `event`] Event Handler내의 this는 어떤 값을 가지고 있나요?
+- [`下`, `js`, `timer`] setInterval vs recursive setTimeout
+- [`下`, `browser`, `event-loop`] macro task queue 사용 사례에 대해 설명해 주세요
+- [`下`, `browser`, `event-loop`] micro task queue 사용 사례에 대해 설명해 주세요
+- [`下`, `js`, `event`] bubbling vs capturing
+- [`下`, `js`, `event`] bubbling 특성을 활용한 예제를 소개해 주세요
+- [`下`, `js`, `event`] capturing 특성을 활용한 예제를 소개해 주세요
+- [`下`, `js`] Element vs Node
+- [`下`, `js`, `event`] `element.onclick(doSomthing)` vs `element.addEventListener(doSomething)`
+- [`下`, `js`, `performance`, `timer`] debounce vs throttle
+- [`下`, `js`, `browser`] history api
+- [`下`, `js`, `pattern`] Singleton Pattern에 대해 설명해주세요
+- [`下`, `js`, `pattern`] Proxy Pattern에 대해 설명해주세요
+- [`下`, `js`, `pattern`] Observer Pattern에 대해 설명해주세요
+- [`下`, `js`, `pattern`] Factory Pattern에 대해 설명해주세요
+- [`下`, `js`, `pattern`] Prototype Pattern에 대해 설명해주세요
+
+## Optimization
+
+### 上
+
+- [`上`, `browser`] Critical Rendering Path 대해 설명해 주세요
+- [`上`, `browser`] rendering을 차단하는 리소스는 어떤것들이 있나요?
+
+### 中
+
+- [`中`, `browser`] preload vs preconnect vs prefetch
+- [`中`, `browser`] page load event에 대해 설명해 주세요
+- [`中`, `browser`, `html`] defer vs async
+- [`中`, `browser`, `html`] async의 단점에 대해 설명해 주세요
+- [`中`, `browser`, `html`] defer 단점에 대해 설명해 주세요
+- [`中`, `bundle`, `webpack`, `module`] Webpack의 Code Spliting에 대해 설명해 주세요
+- [`中`, `ssr`] Incremental Rendering과 SSR(server side rendering)에 대해 설명해 주세요
+- [`中`, `ssr`] SSR(server side rendering)의 장점은 무엇인가요?
+- [`中`, `ssr`] CSR과 SSR의 차이점에 대해 설명해 주세요
+- [`中`, `browser`, `html`] 왜 CSS <link>를 <head>에 놓는것이 좋은지 설명해 주세요
+
+### 下
+- [`下`, `browser`] reflow를 발생시키는 style property는 대표적으로 어떤것들이 있을까요?
+- [`下`, `browser`] repaint를 발생시키는 style property는 대표적으로 어떤것들이 있을까요?
+- [`下`, `bundle`, `webpack`] 번들 사이즈를 줄이려면 어떻게 해야 할까요?
+- [`下`, `bundle`, `webpack`, `module`] tree shaking에 대해 설명해 주세요
+- [`下`, `js`, `module`] Static/Dynmic Import에 대해 설명해 주세요
+
+## Network
+
+### 上
+
+- [`上`, `network`, `browser`] 주소창에 www.naver.com을 치고 나서 발생하는 일들에 대해 설명해 주세요
+- [`上`, `network`, `paradigm`] RESTfull API에 대해 설명해 주세요
+- [`上`, `network`] Get vs Post vs Put vs Patch vs Delete
+- [`上`, `network`] CORS에 대해 설명해 주세요
+
+### 中
+
+- [`中`, `network`] OSI 7계층에 대해 설명해 주세요
+- [`中`, `network`] TCP/IP에 대해 설명해 주세요
+- [`中`, `network`] TCP/IP vs UDP
+- [`中`, `network`] http/1.1 vs http/2
+- [`中`, `network`] DNS에 대해 설명해 주세요
+- [`中`, `network`] URL vs URI
+- [`中`, `network`] CDN(Content Delivery Network)에 대해 설명해 주세요
+- [`中`, `network`] 웹 소켓에 대해 설명해 주세요
+- [`中`, `network`, `browser`] http header의 cache-control에 대해 설명해 주세요
+- [`中`, `network`, `browser`] 사이트를 배포 했는데 사용자 브라우저에 캐쉬가 남아있는 경우 어떻게 해야 할까요?
+- [`中`, `network`, `secure`] http vs https
+- [`中`, `network`, `secure`] XSS에 대해 설명해 주세요
+
+
+### 下
+
+- [`下`, `network`] GSLB(Global Server Load Balancing)에 대해 설명해 주세요
 
 ## React
-- Composition
-  - [[10분 테코톡] ⛰ 로키의 상속보다는 Composition](https://www.youtube.com/watch?v=clbpnp2xYOQ&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=81)
-  - [[10분 테코톡] ☀️앨런의 상속보다는 Composition](https://www.youtube.com/watch?v=YJ4JJsGy8rY&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=134)
-- VirtualDOM
-  - [[10분 테코톡] 🥁 지그의 Virtual DOM](https://www.youtube.com/watch?v=PN_WmsgbQCo&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=61)
-- Suspense
-  - [초간단 비동기 렌더링 React Suspense](https://www.youtube.com/watch?v=8q7OQSPLF4k)
-- Reconsile
-  - [React 공식문서](https://reactjs.org/docs/reconciliation.html)
-  - [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=ZCuYPiUIONs)
-  - [Understanding React's UI Rendering Process](https://www.youtube.com/watch?v=i793Qm6kv3U)
-  - [SMOOSHCAST: React Fiber Deep Dive with Dan Abramov](https://www.youtube.com/watch?v=aS41Y_eyNrU)
-- 생명주기
-- useMemo vs useCallback vs React.memo
-- Custom Hook
-- 리액트에서 클로저가 사용되는 경우
-- onClick에 들어가는 handler함수가 변경될때 re-rendering되는가?
-- React vs Vue vs Angular
-- SPA의 단점
-- Class Component vs Functional Component
-- High-Order-Function
 
-## Design Pattern
-- MVC Pattern
-  - [[10분 테코톡] 🐝범블비의 MVC Pattern](https://www.youtube.com/watch?v=es1ckjHOzTI&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=137)
-  - [[10분 테코톡] 👩🏻‍💻👨🏻‍💻해리&션의 MVC 패턴](https://www.youtube.com/watch?v=uoVNJkyXX0I&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=179)
-  - [[10분 테코톡] 🙋‍♂️제이엠의 MVC](https://www.youtube.com/watch?v=nMolWzTT-dU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=159)
-  - [[10분 테코톡] 🧀 제리의 MVC 패턴](https://www.youtube.com/watch?v=ogaXW6KPc8I&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=86)
-- OOP Pattern
-  - [[10분 테코톡] 🍟 웨지의 OOP](https://www.youtube.com/watch?v=3etKkkna-f0&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=75)
-  - [[Javascript]OOP in javascript - 객체지향 프로그래밍에 대해 알아보자](https://www.youtube.com/watch?v=Ws_GHE5D62s)
-- Singleton Pattern
-  - [[10분 테코톡] 🧇 크로플의 싱글턴과 정적클래스](https://www.youtube.com/watch?v=C6CczyrkYXU&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=72)
-- Event Delegation Pattern
-  - [이벤트 위임의 정의와 활용](https://www.youtube.com/watch?v=8Rzf6IHq1Fw)
-  - [이벤트위임 활용 2 - 행동패턴](https://www.youtube.com/watch?v=rSPHytB0vUA)
+### 上
 
-## 보안
-- XSS
-  - [[10분 테코톡] 🔧알트의 XSS](https://www.youtube.com/watch?v=bSGqBoZd8WM&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=102)
-- HTTPS
-  - [[10분 테코톡] 🍭 다니의 HTTPS](https://www.youtube.com/watch?v=wPdH7lJ8jf0&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=20)
-- SOP(Same Origin Policy)
-- CORS(Cross-Origin Resource Sharing)
-  - [[10분 테코톡] ⚽코나스의 CORS](https://www.youtube.com/watch?v=_sLjXviYivM&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=149)
-  - [[10분 테코톡] 🤠럿고의 CORS](https://www.youtube.com/watch?v=7iGIfcEsc2g&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=101)
-  - [[10분 테코톡] 🌳 나봄의 CORS](https://www.youtube.com/watch?v=-2TgkKYmJt4&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=55)
-  - [CORS에 영향 받지 않고 Request할 수 있는 경우](https://homoefficio.github.io/2015/07/21/Cross-Origin-Resource-Sharing/)
+- [`上`, `react`] react가 해결하려는 문제는 무엇인가요?
+- [`上`, `react`] 컴포넌트란 무엇인가요?
+- [`上`, `react`, `hook`, `context`] ContextAPI의 문제점은 무엇인가요?
+- [`上`, `react`] 웹 개발의 시대가 jQuery에서 React나 Vue로 넘어온 이유가 무엇일까요?
+- [`上`, `react`] React와 Vue는 서로가 어떤게 다르길래, 사용 대상이 나뉘는 걸까요?
+- [`上`, `react`] 리액트의 재조정(reconciliation)과정에 대해 설명해 주세요
 
-## 기타 등등
-- 프레임워크 vs 라이브러리 vs API
-  - [[10분 테코톡] 🌳임루트의 프레임워크 vs 라이브러리 vs API](https://www.youtube.com/watch?v=-ZG8uX7mpuk&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=131)
-  - [[10분 테코톡] 🙆‍♀️티버의 API vs Library vs Framework](https://www.youtube.com/watch?v=We8JKbNQeLo&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=164)
-  - [[10분 테코톡] 📢 욘의 프레임워크 vs 라이브러리 vs API](https://www.youtube.com/watch?v=_j4u4ftWwhQ&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=67)
-- 인증
-  - [[10분 테코톡] 🎡토니의 인증과 인가](https://www.youtube.com/watch?v=y0xMXlOAfss&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=118)
-  - [[10분 테코톡] 🌳 나봄의 인증과 인가](https://www.youtube.com/watch?v=TXWUNePimAc&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=47)
-  - JWT(JSON WEB TOKEN)
-- Blocking vs Non-Blocking
-  - [[10분 테코톡] 🐰 멍토의 Blocking vs Non-Blocking, Sync vs Async](https://www.youtube.com/watch?v=oEIoqGd-Sns&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=56)
-- Test
-  - [[10분 테코톡] 🎪 도비의 프론트엔드에서의 테스트 종류](https://www.youtube.com/watch?v=pkYUcKWOqPs&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=50)
-  - [[10분 테코톡] 🍺 서니의 프론트엔드 성능 측정](https://www.youtube.com/watch?v=A6J74xLWqYg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=37) 
-- 배포
-  - [[10분 테코톡] 🍟 웨지의 지속적 배포](https://www.youtube.com/watch?v=X6QGhg19Kqg&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH&index=29)
-- HTML
-  - `<img srcset="..."` `srcset` 속성의 역할은?
-  - `<a>`태그 안에 `<button>`을 써도 되는가?
-    - [Can I nest a <button> element inside an <a> using HTML5?](https://stackoverflow.com/a/6393863/9279003)
-    - [codepen 테스트](https://codepen.io/YOONBYEONGIN/pen/eYGyYXV)
-  - 왜 CSS `<link>`를 `<head>`에 놓는것이 좋은가?
+### 中
+- [`中`, `react`] SPA의 장점에 대해 설명해주세요
+- [`中`, `react`] Render Phase와 Commit Phase에 대해서 설명해 주세요
+- [`中`, `react`] Hooks의 장점은 무엇인가요?
+- [`中`, `react`] Class Component vs Function Component
+- [`中`, `react`] CSS in CSS(css, sass, css-module) vs CSS in JS(emotion, styled-component)
+- [`中`, `react`] state vs props
+- [`中`, `react`, `hook`] useEffect의 dependency를 설정해 주지 않으면 어떤 문제가 발생하나요? (staled state)
+- [`中`, `react`, `hook`] useCallback vs useMemo vs React.memo
+- [`中`, `react`, `hook`] React팀에서 모든 컴포넌트에 React.memo를 기본으로 적용해놓지 않은 이유가 무엇이라 생각하시나요?
+- [`中`, `react`, `hook`, `context`] ContextAPI는 언제 사용하면 좋을까요?
+- [`中`, `react`, `hook`] useEffect vs useLayoutEffect
+- [`中`, `react`, `hook`] useTransition은 어떤 문제를 해결하기 위해 나온 훅인가요?
+- [`中`, `react`, `context`] Prop drilling을 해결하기 위한 방법에 대해 설명해 주세요
+- [`中`, `react`, `jsx`] JSX에서 if-else를 왜 사용할 수 없나요?
+- [`中`, `react`] Class Component에 비해 Hook + Functional Component가 가지는 이점은?
+- [`中`, `react`, `hook`] useState는 어떻게 이전 상태를 기억하나요?
+- [`中`, `react`, `hook`] 왜 조건문 안에 hook을 쓰면 안될까요?
+- [`中`, `react`, `performance`] 배열을 map돌려서 list를 그릴때 key가 왜 필요한가요?
+- [`中`, `react`, `performance`] index를 key로 쓰면 안되는 이유에 대해 설명해 주세요
+- [`中`, `react`] Controlled Component vs Uncontrolled Component
+- [`中`, `react`, `pattern`] Hook은 Presentational/Container pattern을 대체할 수 있나요?
+- [`中`, `react`] VirtualDOM이 필요한 이유에 대해 설명해 주세요
+- [`中`, `react`] React18에 본격적으로 적용된 concurrent mode에 대해 설명해 주세요
+- [`中`, `react`] Fiber에 대해 설명해 주세요
+- [`中`, `react`] 컴포넌트 분리 기준에 대해 설명해 주세요
+- [`中`, `react`] 직접 만들어본 Custom Hook에 대해 소개해 주세요
+- [`中`, `react`, `pattern`] Container/Presentation Pattern에 대해 설명해주세요
+- [`中`, `react`, `pattern`] Higher-Order Component Pattern에 대해 설명해주세요
+- [`中`, `react`, `pattern`] Hooks Pattern에 대해 설명해주세요
+- [`中`, `react`, `redux`] redux가 context api에 비해 가지는 장점에 대해 설명해 주세요
+- [`中`, `react`, `why`] react-query를 왜 쓰셨나요?
+- [`中`, `react`], `why`, `react-query`] react-query의 stale time과 cache time의 차이에 대해 설명해 주세요
+- [`中`, `react`] Class Component의 life cycle과 Hook + Function Component의 life cycle의 차이점에 대해 설명해 주세요
+- [`中`, `react`, `pattern`] Suspense와 Error Boundary를 사용했을때의 장점에 대해 설명해 주세요
+
+### 下
+
+- [`下`, `react`, `hook`] 같은 값으로 setState해도 re-redering이 될까요?
+- [`下`, `react`, `hook`] props로 받은 값을 useState에 넣었을때 props가 바뀌면 초기값도 바뀔까요?
+- [`下`, `react`, `hook`] 상태값을 객체에 다 넣기 vs 쪼개서 다른 상태값으로 관리하기
+- [`下`, `react`, `hook`] useCallback은 어떤 용도로 사용하나요?
+- [`下`, `react`, `hook`] ref는 무엇이고 언제 사용하면 좋을까요?
+- [`下`, `react`, `hook`] useImperativeHandle는 어떤 용도인가요?
+- [`下`, `react`] Strict Mode가 필요한 이유에 대해 설명해 주세요
+- [`下`, `react`] render vs mount
+- [`下`, `react`, `pattern`] Render Props Pattern에 대해 설명해주세요
+- [`下`, `react`, `pattern`] Provider Pattern에 대해 설명해주세요
+- [`下`, `react`, `pattern`] Compound Pattern에 대해 설명해주세요
+
+## Computer Science
+
+- [`上`, `cs`] Process vs Thread
+- [`中`, `network`] 웹서버 vs WAS
+
+## 기타
+- [`上`, `why`] 여러분은 왜 프론트 개발자가 되고 싶나요?
+- [`中`] 기억에 남는 Error가 있다면 소개해 주세요
+- [`中`] 프론트엔드에서 테스팅의 효용성에 대해 어떻게 생각하시나요?
+- [`中`] 좋은 코드란 어떤 코드인가요?
+- [`中`] 협업할때 어려운 점이 있었나요? 있었다면 어떻게 극복했나요?
+- [`中`] 새로운 기술을 습득하기 위해 어떤 방식으로 접근하고 계신가요?
