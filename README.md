@@ -173,6 +173,7 @@
 - [`中`, `react`] Class Component vs Function Component
 - [`中`, `react`] CSS in CSS(css, sass, css-module) vs CSS in JS(emotion, styled-component)
 - [`中`, `react`] state vs props
+- [`中`, `react`, `hook`] Custom hook으로 분리했을때의 장점은 무엇인가요?
 - [`中`, `react`, `hook`] useEffect의 dependency를 설정해 주지 않으면 어떤 문제가 발생하나요? (staled state)
 - [`中`, `react`, `hook`] useCallback vs useMemo vs React.memo
 - [`中`, `react`, `hook`] React팀에서 모든 컴포넌트에 React.memo를 기본으로 적용해놓지 않은 이유가 무엇이라 생각하시나요?
